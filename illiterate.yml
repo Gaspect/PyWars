@@ -1,0 +1,7 @@
+inline: true
+output: docs
+sources:
+  pw.{name}: PyWars/{name}.py
+  pw.ty.{name}: PyWars/types/{name}.py
+  ex.{name}: examples/{name}.py
+  index: Readme.md

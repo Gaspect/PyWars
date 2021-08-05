@@ -1,0 +1,29 @@
+site_name: PyWars
+# site_url: 
+
+theme:
+    name: material
+    language: es
+    feature:
+        tabs: true
+    palette:
+        primary: black
+        accent: black
+
+markdown_extensions:
+    - pymdownx.highlight
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - admonition
+    
+nav:
+    - Home: index.md
+    - Examples:
+        Printing: ex.printing.md
+        Pyrogram: ex.pyrogram.md
+    - Api:
+        PyWars.__init__: pw.__init__.md
+        PyWars.types.__init__: pw.ty.__init__.md
+        PyWars.types.digest: pw.ty.digests.md
+        PyWars.types.types: pw.ty.types.md
+        PyWars.client: pw.client.md
