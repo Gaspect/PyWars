@@ -9,7 +9,7 @@ from typing import Dict, List
 # and faust record
 from faust import Record
 
-# and this digest object for processing "responses as list" from de  api
+# and this digest object for processing "responses as list" from the api
 from .digests import Digest
 
 # ## The records
@@ -106,7 +106,7 @@ class Shop(Record, serializer="json"):
     castleDiscount: int
 
 
-# At in the end the yellow_page topic definition
+# And in the end the yellow_page topic definition
 class YellowPage(Digest[Shop]):
     pass
 

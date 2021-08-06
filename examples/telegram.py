@@ -4,7 +4,7 @@
 from pyrogram import Client as Telegram 
 from PyWars import *
 
-# We create a telegram and a char war client
+# We create a telegram and a chat wars client
 telegram  = Telegram("my_account")
 chat_wars = Client(loglevel='info', )
 

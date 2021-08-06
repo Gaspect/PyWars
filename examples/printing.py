@@ -6,15 +6,15 @@ from PyWars import *
 app = Client()
 
 
-# We define a agent to process deals
+# We define an agent to process deals
 
 @app.agent(Deal)  # this decorator define wath kind of topic we are specting for consume
-async def deals(stream: Stream[Deal]):  # as we consume 'deals' topic we recieva stream of deals
+async def deals(stream: Stream[Deal]):  # as we consume 'deals' topic we recieve a stream of deals
     async for deal in stream:  # we itterate over the deals
-        print(deal)  # and we printing every one
+        print(deal)  # and we print every one of them
 
 
-# From now on all is more of the same implementation
+# From now on all it will be more of the same implementation
 
 
 @app.agent(Offer)

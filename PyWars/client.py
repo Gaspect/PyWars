@@ -18,12 +18,12 @@ from .types import Deal, Duel, Offer, SexDigest, YellowPage, AuctionDigest
 
 # ## The Client
 
-# The client is just a object composition using faust
+# The client is just an object composition using faust
 
 
 class Client:
 
-    # We use this to know wath models and kafka topics are allowed and how are related.
+    # We use this to know what models and kafka topics are allowed and how are related.
     allowed_records = {
         Deal: "deals",
         Duel: "duels",
@@ -116,7 +116,7 @@ class Client:
     def timer(self, seconds):
         return self._app.timer(interval=seconds)
 
-    # Return a function to start and a function to stoped it (not for external use)
+    # Return a function to start and a function to stop it (not for external use)
     @cached_property
     def _driven_functions(self) -> Tuple[Callable, Callable]:
 
@@ -132,15 +132,15 @@ class Client:
         ) # We remove or preset not important setting when we create the worker
 
        
-        worker.spinner = None  # Removing anoing spinner
+        worker.spinner = None  # Removing anoying spinner
 
         return lambda : self.loop.run_until_complete(worker.start()), worker.stop_and_shutdown
 
-    # This method start the app execution loop
+    # This method starts the app execution loop
     def start(self):
         return self._driven_functions[0]()
 
-    # This method stop the app execution loop
+    # This method stops the app execution loop
     def stop(self):
         return self._driven_functions[1]()
 
