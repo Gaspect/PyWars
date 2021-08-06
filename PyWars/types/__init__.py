@@ -16,5 +16,5 @@ from .types import (
     YellowPage,
     AuctionDeal,
     AuctionDigest,
-    Specialization
+    Specialization,
 )

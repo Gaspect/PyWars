@@ -60,7 +60,7 @@ class Client:
         work_dir: Union[str, Path] = "./.fchatwars",
         loop: asyncio.AbstractEventLoop = None,
         debug: bool = False,
-        loglevel: Union[str, int] = "warning"
+        loglevel: Union[str, int] = "warning",
     ) -> None:
 
         self._loop = loop if loop is not None else asyncio.get_event_loop()
@@ -77,7 +77,6 @@ class Client:
         self._workdir = Path(work_dir)
         self._workdir.mkdir(exist_ok=True)
 
-
     # The properties are straigth forward so ... no explanations are needed
 
     @property
@@ -93,11 +92,11 @@ class Client:
         return self._version
 
     @property
-    def debug(self)->bool:
+    def debug(self) -> bool:
         return self._debug
 
     @property
-    def loglevel(self)->Union[str, int]:
+    def loglevel(self) -> Union[str, int]:
         return self._logleve
 
     # This is a faust topic builder with some cache (*just for internal use*)
@@ -120,7 +119,6 @@ class Client:
     @cached_property
     def _driven_functions(self) -> Tuple[Callable, Callable]:
 
-        
         worker = Worker(
             self._app,
             loop=self.loop,
@@ -129,12 +127,14 @@ class Client:
             workdir=self.workdir,
             quiet=True,
             redirect_stdouts=False,
-        ) # We remove or preset not important setting when we create the worker
+        )  # We remove or preset not important setting when we create the worker
 
-       
         worker.spinner = None  # Removing anoying spinner
 
-        return lambda : self.loop.run_until_complete(worker.start()), worker.stop_and_shutdown
+        return (
+            lambda: self.loop.run_until_complete(worker.start()),
+            worker.stop_and_shutdown,
+        )
 
     # This method starts the app execution loop
     def start(self):

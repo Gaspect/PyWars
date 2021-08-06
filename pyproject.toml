@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PyWars"
-version = "0.1.0"
+version = "0.1.1"
 description = "Public topic consumer for Chat Wars API"
 authors = ["Jesús Enrique <jesusefg12@gmail.com>"]
 license = "MIT"
