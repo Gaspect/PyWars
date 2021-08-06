@@ -20,7 +20,7 @@ nav:
     - Home: index.md
     - Examples:
         Printing: ex.printing.md
-        Pyrogram: ex.pyrogram.md
+        Pyrogram: ex.telegram.md
     - Api:
         PyWars.__init__: pw.__init__.md
         PyWars.types.__init__: pw.ty.__init__.md
