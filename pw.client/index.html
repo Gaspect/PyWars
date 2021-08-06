@@ -469,7 +469,7 @@ and is executed in a provided or self generated <strong>loop</strong>.</p>
         <span class="n">work_dir</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;./.fchatwars&quot;</span><span class="p">,</span>
         <span class="n">loop</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">AbstractEventLoop</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">debug</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-        <span class="n">loglevel</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;warning&quot;</span>
+        <span class="n">loglevel</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span> <span class="o">=</span> <span class="n">loop</span> <span class="k">if</span> <span class="n">loop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
@@ -500,11 +500,11 @@ and is executed in a provided or self generated <strong>loop</strong>.</p>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_version</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">debug</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">debug</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_debug</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">loglevel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="k">def</span> <span class="nf">loglevel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_logleve</span>
 </code></pre></div>
 <p>This is a faust topic builder with some cache (<em>just for internal use</em>)</p>
@@ -527,7 +527,6 @@ an asyncronous stream consumer</p>
 <div class="highlight"><pre><span></span><code>    <span class="nd">@cached_property</span>
     <span class="k">def</span> <span class="nf">_driven_functions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]:</span>
 
-
         <span class="n">worker</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_app</span><span class="p">,</span>
             <span class="n">loop</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">loop</span><span class="p">,</span>
@@ -536,12 +535,14 @@ an asyncronous stream consumer</p>
             <span class="n">workdir</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">workdir</span><span class="p">,</span>
             <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="n">redirect_stdouts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="p">)</span> <span class="c1"># We remove or preset not important setting when we create the worker</span>
-
+        <span class="p">)</span>  <span class="c1"># We remove or preset not important setting when we create the worker</span>
 
         <span class="n">worker</span><span class="o">.</span><span class="n">spinner</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Removing anoying spinner</span>
 
-        <span class="k">return</span> <span class="k">lambda</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">worker</span><span class="o">.</span><span class="n">start</span><span class="p">()),</span> <span class="n">worker</span><span class="o">.</span><span class="n">stop_and_shutdown</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">worker</span><span class="o">.</span><span class="n">start</span><span class="p">()),</span>
+            <span class="n">worker</span><span class="o">.</span><span class="n">stop_and_shutdown</span><span class="p">,</span>
+        <span class="p">)</span>
 </code></pre></div>
 <p>This method starts the app execution loop</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

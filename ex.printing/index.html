@@ -378,7 +378,9 @@
 </code></pre></div>
 <p>We define an agent to process deals</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">agent</span><span class="p">(</span><span class="n">Deal</span><span class="p">)</span>  <span class="c1"># this decorator define wath kind of topic we are specting for consume</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">deals</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span> <span class="n">Stream</span><span class="p">[</span><span class="n">Deal</span><span class="p">]):</span>  <span class="c1"># as we consume &#39;deals&#39; topic we recieve a stream of deals</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">deals</span><span class="p">(</span>
+    <span class="n">stream</span><span class="p">:</span> <span class="n">Stream</span><span class="p">[</span><span class="n">Deal</span><span class="p">],</span>
+<span class="p">):</span>  <span class="c1"># as we consume &#39;deals&#39; topic we recieve a stream of deals</span>
     <span class="k">async</span> <span class="k">for</span> <span class="n">deal</span> <span class="ow">in</span> <span class="n">stream</span><span class="p">:</span>  <span class="c1"># we itterate over the deals</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">deal</span><span class="p">)</span>  <span class="c1"># and we print every one of them</span>
 </code></pre></div>
