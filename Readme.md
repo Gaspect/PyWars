@@ -119,7 +119,7 @@ The magical start and stop methods were thought to run and stop client with his 
 ### Bulking
 
 ```python
-from PyWars import *nicely
+from PyWars import *
 
 app = Client()
 
