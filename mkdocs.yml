@@ -3,7 +3,7 @@ site_url: https://Gaspect.github.io/PyWars/
 
 theme:
     name: material
-    language: es
+    language: en
     feature:
         tabs: true
     palette:
