@@ -1,5 +1,5 @@
 site_name: PyWars
-# site_url: 
+site_url: https://Gaspect.github.io/PyWars/
 
 theme:
     name: material

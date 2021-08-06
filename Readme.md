@@ -134,4 +134,4 @@ A bulk is just the use of **Stream.take** method from **faust**. It will try to 
 
 ----------
 
-For extended documentation see for the docs page.
+For extended documentation see for the [docs](https://Gaspect.github.io/PyWars/) page.
