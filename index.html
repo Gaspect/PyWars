@@ -1,0 +1,711 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>PyWars</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pywars" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="PyWars" class="md-header__button md-logo" aria-label="PyWars" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PyWars
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="PyWars" class="md-nav__button md-logo" aria-label="PyWars" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PyWars
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivations" class="md-nav__link">
+    🚀 Motivations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    ☄ Quick start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    📚 Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dummy-client-creation" class="md-nav__link">
+    Dummy client creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifiying-client-version" class="md-nav__link">
+    Specifiying client version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-agents" class="md-nav__link">
+    Adding agents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-timers" class="md-nav__link">
+    Adding timers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-executions-loops" class="md-nav__link">
+    Using executions loops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulking" class="md-nav__link">
+    Bulking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex.printing.html" class="md-nav__link">
+        Printing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ex.pyrogram.html" class="md-nav__link">
+        Pyrogram
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Api" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pw.__init__.html" class="md-nav__link">
+        PyWars.__init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pw.ty.__init__.html" class="md-nav__link">
+        PyWars.types.__init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pw.ty.digests.html" class="md-nav__link">
+        PyWars.types.digest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pw.ty.types.html" class="md-nav__link">
+        PyWars.types.types
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pw.client.html" class="md-nav__link">
+        PyWars.client
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivations" class="md-nav__link">
+    🚀 Motivations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    ☄ Quick start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    📚 Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dummy-client-creation" class="md-nav__link">
+    Dummy client creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifiying-client-version" class="md-nav__link">
+    Specifiying client version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-agents" class="md-nav__link">
+    Adding agents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-timers" class="md-nav__link">
+    Adding timers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-executions-loops" class="md-nav__link">
+    Using executions loops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulking" class="md-nav__link">
+    Bulking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="pywars">PyWars</h1>
+<blockquote>
+<p>A public topic consumer for Chat Wars ... <strong>with steroids</strong></p>
+</blockquote>
+<h2 id="motivations">🚀 Motivations</h2>
+<ul>
+<li>🤖 Build a bot? </li>
+<li>👥 Help comunity? </li>
+<li>🚀 Personal training?</li>
+</ul>
+<h2 id="quick-start">☄ Quick start</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyWars</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">agent</span><span class="p">(</span><span class="n">Deal</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">deals</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span><span class="n">Stream</span><span class="p">[</span><span class="n">Deal</span><span class="p">]):</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">deal</span> <span class="ow">in</span> <span class="n">stream</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">deal</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="overview">📚 Overview</h2>
+<h3 id="dummy-client-creation">Dummy client creation</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyWars</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+</code></pre></div>
+<blockquote>
+<p>This will create a client with an autogenerated id for chat wars <strong>v2</strong> api</p>
+</blockquote>
+<hr />
+<h3 id="specifiying-client-version">Specifiying client version</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyWars</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="n">Client</span><span class="o">.</span><span class="n">Version</span><span class="o">.</span><span class="n">CW3</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>This will create a client for chat wars <strong>v3</strong> api</p>
+</blockquote>
+<hr />
+<h3 id="adding-agents">Adding agents</h3>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyWars</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">agent</span><span class="p">(</span><span class="n">Deal</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">deals</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span><span class="n">Stream</span><span class="p">[</span><span class="n">Deal</span><span class="p">]):</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">deal</span> <span class="ow">in</span> <span class="n">stream</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">deal</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+The <strong>Client.agent</strong> method recieves an allowed record. The allowed records are:</p>
+<ul>
+<li><strong>Deal</strong> for <em>cw*-deals</em> topic</li>
+<li><strong>Duel</strong> for <em>cw*-duels</em> topic</li>
+<li><strong>Offer</strong> for <em>cw*-offers</em> topic</li>
+<li><strong>SexDigest</strong> for <em>cw*-sex_digest</em> topic</li>
+<li><strong>YellowPage</strong> for <em>cw*-yellow_pages</em> topic</li>
+<li><strong>AuctionDigest</strong> for <em>cw*-au_digest</em> topic</li>
+</ul>
+<hr />
+<h3 id="adding-timers">Adding timers</h3>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyWars</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+<span class="n">procesed_deals</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">agent</span><span class="p">(</span><span class="n">Deal</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">deals</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span><span class="n">Stream</span><span class="p">[</span><span class="n">Deal</span><span class="p">]):</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">deal</span> <span class="ow">in</span> <span class="n">stream</span><span class="p">:</span>
+        <span class="n">procesed_deals</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">timer</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">print_procesed</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">procesed_deals</span><span class="p">)</span>
+    <span class="n">procesed_deals</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+A timer is a courutine that is triggered every <em>n</em> seconds in the previous examples we used <em>60 seconds</em>.</p>
+<hr />
+<h3 id="using-executions-loops">Using executions loops</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyWars</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">loop</span><span class="o">=</span><span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">())</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">agent</span><span class="p">(</span><span class="n">Deal</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">deals</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span><span class="n">Stream</span><span class="p">[</span><span class="n">Deal</span><span class="p">]):</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">deal</span> <span class="ow">in</span> <span class="n">stream</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">deal</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div>
+<p>The magical start and stop methods were thought to run and stop client with his execution loop smootly</p>
+<hr />
+<h3 id="bulking">Bulking</h3>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PyWars</span> <span class="kn">import</span> <span class="o">*</span><span class="n">nicely</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">agent</span><span class="p">(</span><span class="n">Deal</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">deals</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span><span class="n">Stream</span><span class="p">[</span><span class="n">Deal</span><span class="p">]):</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">bulk</span> <span class="ow">in</span> <span class="n">stream</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">bulk</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div>
+A bulk is just the use of <strong>Stream.take</strong> method from <strong>faust</strong>. It will try to take bulks of 100 objetcs, in case that it can´t return the 100 objects its going to wait for 10 seconds and return any amount gathered in that time.</p>
+<hr />
+<p>For extended documentation see for the docs page.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+      
+        
+        <a href="ex.printing.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Printing" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Printing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+    
+  </body>
+</html>
